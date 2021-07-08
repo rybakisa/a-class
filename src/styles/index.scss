@@ -1,0 +1,12 @@
+// common
+@import "reset";
+@import "vars";
+@import "fonts";
+
+// components
+@import "../components/button/button.scss";
+@import "../components/screens/screens.scss";
+
+body {
+  font-family: "Inter", sans-serif;
+}

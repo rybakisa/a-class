@@ -1,0 +1,16 @@
+.button {
+  background-color: $primary-color;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 12px 24px;
+  border-radius: 33.75px;
+  border: none;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $primary-dark;
+  }
+}
