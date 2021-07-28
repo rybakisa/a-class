@@ -5,7 +5,11 @@
 
 // components
 @import "../components/button/button.scss";
+@import "../components/tutorHeader/tutor-header.scss";
 @import "../components/screens/screens.scss";
+
+// pages
+@import "../pages/tutorProfile/tutor-profile.scss";
 
 body {
   font-family: "Inter", sans-serif;
