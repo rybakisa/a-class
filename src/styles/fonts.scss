@@ -8,5 +8,7 @@
 }
 
 @include font-include("Inter", "../fonts/Inter-Regular");
-@include font-include("Inter", "../fonts/Inter-Bold", bold);
 @include font-include("Inter", "../fonts/Inter-Light", 300);
+@include font-include("Inter", "../fonts/Inter-Medium", 500);
+@include font-include("Inter", "../fonts/Inter-Bold", 700);
+@include font-include("Inter", "../fonts/Inter-ExtraBold", 800);

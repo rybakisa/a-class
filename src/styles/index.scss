@@ -2,15 +2,26 @@
 @import "reset";
 @import "vars";
 @import "fonts";
+@import "media-mixins";
 
 // components
 @import "../components/button/button.scss";
 @import "../components/tutorHeader/tutor-header.scss";
+@import "../components/header/header.scss";
+@import "../components/footer/footer.scss";
+@import "../components/goalsSlider/goals-slider.scss";
+@import "../components/benefitsSlider/benefits-slider.scss";
+@import "../components/feedbackSlider/feedback-slider.scss";
 @import "../components/screens/screens.scss";
+@import "../components/videoModal/video-modal.scss";
 
 // pages
 @import "../pages/tutorProfile/tutor-profile.scss";
 
 body {
   font-family: "Inter", sans-serif;
+}
+
+body.modal-opened {
+  overflow: hidden;
 }

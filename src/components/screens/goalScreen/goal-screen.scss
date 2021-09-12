@@ -1,0 +1,40 @@
+.goal-screen {
+  background-color: #feeab8;
+  overflow: hidden;
+
+  &__content {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    margin: 52px 35px 52px 0;
+    width: 540px;
+
+    .button {
+      margin-top: 36px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    color: #00a99d;
+    margin-bottom: 27px;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}

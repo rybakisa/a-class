@@ -1,57 +1,31 @@
 import React from "react";
-import titleImg from "../../../images/title-img.png";
-import titleBgOne from "../../../images/title-bg-one.png";
-import titleBgTwo from "../../../images/title-bg-two.png";
-import titleBgThree from "../../../images/title-bg-three.png";
-import titleBgFour from "../../../images/title-bg-four.png";
+import bgImg from "../../../images/title-screen-bg.png";
 import Button from "../../button/Button";
-
-const titleBgImages = [
-  {
-    src: titleBgOne,
-    modifier: "one",
-  },
-  {
-    src: titleBgTwo,
-    modifier: "two",
-  },
-  {
-    src: titleBgThree,
-    modifier: "three",
-  },
-  {
-    src: titleBgFour,
-    modifier: "four",
-  },
-];
+import Header from "../../header/Header";
 
 const TitleScreen = () => {
   return (
     <section className="title-screen">
+      <Header />
+      <img src={bgImg} alt="" className="title-screen__bg" />
       <div className="title-screen__content-wrapper">
-        <div className="title-screen__text">
-          <h2 className="title-screen__title">
-            Новый взгляд
+        <div className="title-screen__content">
+          <h1 className="title-screen__title">
+            Новая эра
+            <br />в образовании
+          </h1>
+          <span className="title-screen__text">
+            А-Класс превратит школу в надежный
             <br />
-            на учебные методики
-          </h2>
-          <p className="title-screen__subtitle">
-            А-Класс превратит школу в надежный фундамент
-            <br />
-            для яркой и успешной жизни
-          </p>
-          <Button text="Начать занятия" />
+            фундамент для яркой и успешной жизни
+          </span>
+          <a
+            className="title-screen__link"
+            href="https://teacher.aclass.ru/login">
+            <Button text="Начать занятия" />
+          </a>
         </div>
-        <img src={titleImg} alt="" className="title-screen__img" />
       </div>
-      {titleBgImages.map((img) => (
-        <img
-          src={img.src}
-          alt=""
-          key={img.modifier}
-          className={`title-screen__bg-img title-screen__bg-img--${img.modifier}`}
-        />
-      ))}
     </section>
   );
 };

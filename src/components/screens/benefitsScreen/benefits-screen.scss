@@ -1,0 +1,14 @@
+.benefits-screen {
+  background-color: #fddedb;
+  padding: 52px 0;
+  overflow: hidden;
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    text-align: center;
+    color: #00a99d;
+    margin-bottom: 40px;
+  }
+}

@@ -1,55 +1,51 @@
 .title-screen {
-  background-color: $bg-color;
-  padding: 145px 240px;
   position: relative;
+  background-color: #fddedb;
+  height: 690px;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   &__content-wrapper {
     display: flex;
-    align-items: center;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
     position: relative;
     z-index: 1;
   }
 
-  &__text {
-    margin-right: 20px;
+  &__content {
+    margin: auto 0 49px auto;
+
+    .button {
+      margin-top: 36px;
+    }
   }
 
   &__title {
-    color: $primary-color;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 58px;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 110%;
+    color: #663d84;
+    margin-bottom: 24px;
   }
 
-  &__subtitle {
-    color: $text-color;
+  &__text {
+    font-weight: 500;
     font-size: 24px;
-    font-size: 18px;
     line-height: 150%;
-    margin: 16px 0 30px 0;
+    color: #000000;
+    border-bottom: 2px solid #000000;
   }
 
-  &__bg-img {
-    position: absolute;
-
-    &--one {
-      top: 0;
-      left: 0;
-    }
-
-    &--two {
-      bottom: 0;
-      left: 0;
-    }
-
-    &--three {
-      bottom: 0;
-      left: 20%;
-    }
-
-    &--four {
-      bottom: 0;
-      right: 0;
-    }
+  &__link {
+    text-decoration: none;
   }
 }

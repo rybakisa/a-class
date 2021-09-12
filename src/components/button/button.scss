@@ -1,16 +1,29 @@
 .button {
-  background-color: $primary-color;
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  padding: 12px 24px;
-  border-radius: 33.75px;
+  display: block;
+  background-color: #f3525f;
+  border-radius: 45px;
   border: none;
-  transition: all 0.3s;
+  padding: 16px 35px;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
 
   &:hover {
-    background-color: $primary-dark;
+    background-color: #c9454f;
+  }
+
+  &--outline {
+    color: #f3525f;
+    background-color: transparent;
+    border: 1px solid #f3525f;
+
+    &:hover {
+      background-color: #c9454f;
+      border-color: #c9454f;
+      color: #ffffff;
+    }
   }
 }

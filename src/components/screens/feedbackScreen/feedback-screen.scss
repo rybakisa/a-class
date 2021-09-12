@@ -1,0 +1,14 @@
+.feedback-screen {
+  padding: 52px 0;
+  background-color: #75d1ca;
+  overflow: hidden;
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}

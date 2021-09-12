@@ -1,0 +1,110 @@
+.contact-screen {
+  padding: 52px 0;
+  background-color: #75d1ca;
+  position: relative;
+
+  &__content {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    color: #ffffff;
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.form {
+  margin-top: 48px;
+
+  &__input-wrapper {
+    position: relative;
+    display: inline-block;
+
+    &--name {
+      margin-right: 15px;
+    }
+
+    &--phone {
+      margin-top: 16px;
+    }
+  }
+
+  &__input-icon {
+    position: absolute;
+    left: 12px;
+    top: 17px;
+  }
+
+  &__input {
+    height: 50px;
+    width: 266px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    padding: 0 12px 0 46px;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 110%;
+    color: #000000;
+
+    &[type="phone"] {
+      width: 547px;
+    }
+
+    &--error {
+      border: 2px solid #f3525f;
+    }
+
+    &::placeholder {
+      color: #a9abbd;
+    }
+
+    &:focus {
+      border: 2px solid #118f86;
+    }
+  }
+
+  &__footer {
+    position: relative;
+    margin-top: 16px;
+  }
+
+  &__button {
+    width: 266px;
+    height: 50px;
+    background-color: #f3525f;
+    border-radius: 10px;
+    border: none;
+    transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #c9454f;
+    }
+  }
+
+  &__error {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #f3525f;
+    position: absolute;
+    bottom: -25px;
+  }
+}
