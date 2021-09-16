@@ -1,9 +1,22 @@
 .videos-screen {
   padding: 52px 0;
 
+  @include tablet_mobile {
+    overflow: hidden;
+  }
+
   &__content {
     display: flex;
     justify-content: center;
+
+    @include tablet {
+      justify-content: flex-start;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 
   &__item {

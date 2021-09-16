@@ -24,6 +24,10 @@
   padding: 20px;
   opacity: 0.3;
 
+  @include tablet {
+    width: 700px;
+  }
+
   &--active {
     opacity: 1;
   }
@@ -33,7 +37,7 @@
   }
 
   &__info {
-    width: 35%;
+    width: 37%;
     flex-shrink: 0;
     margin-right: 10px;
   }

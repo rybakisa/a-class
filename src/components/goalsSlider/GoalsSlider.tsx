@@ -1,4 +1,4 @@
-import React from "react";
+import {isTablet} from "react-device-detect";
 import {useState} from "react";
 import goalsData from "./goalsData";
 
@@ -7,10 +7,14 @@ const ITEM_HEIGHT = 199;
 const TOP_MARGIN = 36;
 
 const GoalsSlider = () => {
-  const [activeItem, setActiveItem] = useState(INITIAL_ACTIVE_ITEM);
+  const [activeItem, setActiveItem] = useState(
+    isTablet ? null : INITIAL_ACTIVE_ITEM,
+  );
   const [topPosition, setTopPosition] = useState(0);
 
   const onItemClick = (key: string, index: number) => {
+    if (isTablet) return;
+
     setActiveItem(key);
     if (index === 0) {
       setTopPosition(-(ITEM_HEIGHT * (index - 1)));

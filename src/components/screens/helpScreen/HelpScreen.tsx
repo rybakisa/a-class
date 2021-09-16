@@ -1,4 +1,3 @@
-import React from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
 import {useState} from "react";
 import teacherBg from "../../../images/help-screen/teacher-bg.png";

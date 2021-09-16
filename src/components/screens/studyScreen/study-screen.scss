@@ -8,10 +8,18 @@
     display: flex;
     max-width: 1000px;
     margin: auto;
+
+    @include tablet {
+      padding: 52px 0;
+    }
   }
 
   &__content {
     margin-left: auto;
+
+    @include tablet {
+      margin: 0 32px 0 auto;
+    }
   }
 
   &__title {
@@ -45,7 +53,7 @@
     bottom: 0;
     left: 0;
 
-    @media (max-width: 1290px) {
+    @include desktop_small_tablet {
       display: none;
     }
   }

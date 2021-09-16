@@ -2,6 +2,10 @@
   padding: 40px 0 60px;
   background-color: #232323;
 
+  @include tablet {
+    padding: 52px 20px;
+  }
+
   &__content {
     max-width: 1000px;
     margin: auto;

@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import feedbackData from "./feedbackData";
 
 const INITIAL_ACTIVE_INDEX = 3;
-const ITEM_WIDTH = 808;
+const ITEM_WIDTH = 708;
 
 const FeedbackSlider = () => {
   const [activeIndex, setActiveIndex] = useState(INITIAL_ACTIVE_INDEX);

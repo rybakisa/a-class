@@ -3,6 +3,11 @@
   padding: 52px 0;
   position: relative;
 
+  @include tablet {
+    padding: 52px 20px;
+    overflow: hidden;
+  }
+
   &__content {
     display: flex;
     max-width: 1000px;
@@ -14,6 +19,10 @@
   &__text {
     width: 354px;
     margin-right: 94px;
+
+    @include tablet {
+      margin-right: 60px;
+    }
   }
 
   &__title {
@@ -80,5 +89,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
+    @include tablet {
+      right: -15%;
+      bottom: -15%;
+    }
   }
 }

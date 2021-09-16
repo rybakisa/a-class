@@ -10,5 +10,9 @@
     text-align: center;
     color: #00a99d;
     margin-bottom: 40px;
+
+    @include tablet {
+      margin: 0 40px 40px;
+    }
   }
 }

@@ -3,6 +3,10 @@
   background-color: #75d1ca;
   position: relative;
 
+  @include tablet {
+    padding: 52px 20px;
+  }
+
   &__content {
     max-width: 1000px;
     margin: auto;

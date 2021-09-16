@@ -20,10 +20,19 @@
     padding: 0 224px;
     display: flex;
     align-items: center;
+
+    @include tablet {
+      padding: 0 20px;
+      justify-content: space-between;
+    }
   }
 
   &__logo {
     margin-right: auto;
+
+    @include tablet {
+      margin-right: 12px;
+    }
   }
 
   &__btn-link {
@@ -47,6 +56,11 @@
     &:hover {
       background-color: #663d84;
       color: #ffffff;
+    }
+
+    @include tablet {
+      padding: 0;
+      margin: 0 4px;
     }
   }
 

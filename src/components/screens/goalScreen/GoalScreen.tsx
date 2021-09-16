@@ -1,9 +1,15 @@
-import React from "react";
+import {isTablet} from "react-device-detect";
 import ScrollableAnchor from "react-scrollable-anchor";
 import Button from "../../button/Button";
 import GoalsSlider from "../../goalsSlider/GoalsSlider";
 
 const GoalScreen = () => {
+  const renderProgramLink = () => (
+    <a className="goal-screen__link" href="https://teacher.aclass.ru/login">
+      <Button text="Попробуйте программу прямо сейчас" />
+    </a>
+  );
+
   return (
     <ScrollableAnchor id="about">
       <section className="goal-screen">
@@ -22,13 +28,10 @@ const GoalScreen = () => {
               <br />
               Вы сможете достигнуть хороших результатов.
             </span>
-            <a
-              className="goal-screen__link"
-              href="https://teacher.aclass.ru/login">
-              <Button text="Попробуйте программу прямо сейчас" />
-            </a>
+            {!isTablet && renderProgramLink()}
           </div>
           <GoalsSlider />
+          {isTablet && renderProgramLink()}
         </div>
       </section>
     </ScrollableAnchor>
