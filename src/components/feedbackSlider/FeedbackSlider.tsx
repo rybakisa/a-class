@@ -1,8 +1,9 @@
 import {useState} from "react";
+import {isTablet} from "react-device-detect";
 import feedbackData from "./feedbackData";
 
 const INITIAL_ACTIVE_INDEX = 3;
-const ITEM_WIDTH = 708;
+const ITEM_WIDTH = isTablet ? 708 : 808;
 
 const FeedbackSlider = () => {
   const [activeIndex, setActiveIndex] = useState(INITIAL_ACTIVE_INDEX);

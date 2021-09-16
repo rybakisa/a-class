@@ -1,7 +1,7 @@
+import {useState} from "react";
 import videosData from "./videosData";
 import videoIcon from "../../../images/video-icon.png";
 import VideoModal from "../../videoModal/VideoModal";
-import {useState} from "react";
 
 const VideosScreen = () => {
   const [activeVideo, setActiveVideo] = useState("");

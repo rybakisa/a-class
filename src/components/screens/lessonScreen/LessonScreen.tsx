@@ -1,31 +1,34 @@
-import React from "react";
+import {useState} from "react";
+import LessonModal from "../../lessonModal/LessonModal";
 import {ReactComponent as PlayIcon} from "../../../images/play-icon.svg";
 import bgImg from "../../../images/lesson-screen-bg.png";
 
-const LESSON_LINKS = [
+const LESSONS = [
   {
     key: "russian",
     text: "Русский язык",
-    link: "",
+    link: "https://teacher.aclass.ru/storage/presentations/index.html?json=03/02/rus0205&dir=03/02/rus0205/0b08e58c-e561-4e47-9b8e-0f0d518c1d7e&slide=0",
   },
   {
     key: "math",
     text: "Математика",
-    link: "",
+    link: "https://teacher.aclass.ru/storage/presentations/index.html?json=01/01/math0104&dir=01/01/math0104/187a4eb1-54d0-4876-96e5-4dd3547d3521&slide=0",
   },
   {
     key: "memory",
     text: "Память",
-    link: "",
+    link: "https://teacher.aclass.ru/storage/presentations/index.html?json=01/01/pam0102&dir=01/01/pam0102/4c2c1ab2-b3fc-43ad-941f-0e9b1a925a8b&slide=0",
   },
   {
     key: "algorithms",
     text: "Алгоритмы",
-    link: "",
+    link: "https://teacher.aclass.ru/storage/presentations/index.html?json=01/01/alg0101&dir=01/01/alg0101/6f7f7361-a9e3-485c-8836-ea3de3569b96&slide=0",
   },
 ];
 
 const LessonScreen = () => {
+  const [activeLesson, setActiveLesson] = useState("");
+
   return (
     <section className="lesson-screen">
       <div className="lesson-screen__content">
@@ -40,22 +43,26 @@ const LessonScreen = () => {
           </span>
         </div>
         <div className="lesson-screen__links">
-          {LESSON_LINKS.map((link) => (
-            <a
-              key={link.key}
+          {LESSONS.map((lesson) => (
+            <div
+              key={lesson.key}
               className="lesson-screen__link"
-              href={link.link}
-              target="_blank"
-              rel="noreferrer">
+              onClick={() => setActiveLesson(lesson.link)}>
               <div className="lesson-screen__link-icon">
                 <PlayIcon />
               </div>
-              <span className="lesson-screen__link-text">{link.text}</span>
-            </a>
+              <span className="lesson-screen__link-text">{lesson.text}</span>
+            </div>
           ))}
         </div>
       </div>
       <img src={bgImg} alt="" className="lesson-screen__bg" />
+      {activeLesson && (
+        <LessonModal
+          onClose={() => setActiveLesson("")}
+          lessonLink={activeLesson}
+        />
+      )}
     </section>
   );
 };
