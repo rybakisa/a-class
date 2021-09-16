@@ -7,6 +7,7 @@ import LessonScreen from "./lessonScreen/LessonScreen";
 import FeedbackScreen from "./feedbackScreen/FeedbackScreen";
 import ContactScreen from "./contactScreen/ContactScreen";
 import VideosScreen from "./videosScreen/VideosScreen";
+import MapScreen from "./mapScreen/MapScreen";
 
 export {
   TitleScreen,
@@ -18,4 +19,5 @@ export {
   FeedbackScreen,
   ContactScreen,
   VideosScreen,
+  MapScreen,
 };

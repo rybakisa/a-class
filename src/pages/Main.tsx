@@ -11,6 +11,7 @@ import {
   StudyScreen,
   TitleScreen,
   VideosScreen,
+  MapScreen,
 } from "../components/screens/screens";
 
 configureAnchors({scrollDuration: 1000});
@@ -26,6 +27,7 @@ const Main = () => {
       <LessonScreen />
       <FeedbackScreen />
       <VideosScreen />
+      <MapScreen />
       <ContactScreen />
       <Footer />
     </main>
