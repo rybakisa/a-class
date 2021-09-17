@@ -6,6 +6,10 @@
     position: relative;
     height: 296px;
     transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+
+    @include mobile {
+      height: 160px;
+    }
   }
 
   &__item-wrapper {
@@ -26,10 +30,20 @@
   transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
   cursor: pointer;
 
+  @include mobile {
+    padding: 22px 10px;
+    height: 150px;
+    width: 280px;
+  }
+
   &--active {
     opacity: 1;
     height: 296px;
     box-shadow: -50px 50px 80px rgba(48, 65, 78, 0.2);
+
+    @include mobile {
+      height: 160px;
+    }
 
     .benefits-slider-item__img {
       opacity: 1;
@@ -42,6 +56,10 @@
     line-height: 110%;
     color: #f3525f;
     margin-bottom: 8px;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__desc {
@@ -50,6 +68,10 @@
     line-height: 150%;
     color: #000000;
     border-bottom: 2px solid #000000;
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 
   &__img {
@@ -69,6 +91,10 @@
   justify-content: center;
   margin-top: 36px;
 
+  @include mobile {
+    margin-top: 24px;
+  }
+
   &__item {
     width: 60px;
     height: 4px;
@@ -77,6 +103,10 @@
     margin: 0 2px;
     cursor: pointer;
     transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+
+    @include mobile {
+      width: 40px;
+    }
 
     &--active {
       background-color: #f5a39b;

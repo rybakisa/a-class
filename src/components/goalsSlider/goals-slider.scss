@@ -6,11 +6,15 @@
     margin: 0 0 48px 0;
   }
 
+  @include mobile {
+    margin: 0 0 24px 0;
+  }
+
   &__content {
     position: relative;
     transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
 
-    @include tablet {
+    @include tablet_mobile {
       display: flex;
       overflow-x: scroll;
 
@@ -23,7 +27,7 @@
   &__item-wrapper {
     padding: 6px 0;
 
-    @include tablet {
+    @include tablet_mobile {
       padding: 0 6px;
     }
   }
@@ -40,6 +44,13 @@
   box-sizing: border-box;
   cursor: pointer;
   transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+
+  @include mobile {
+    width: 260px;
+    height: 272px;
+    flex-direction: column;
+    padding: 12px;
+  }
 
   &--active {
     background-color: #f3525f;
@@ -66,6 +77,10 @@
 
   &__text {
     margin-left: 11px;
+
+    @include mobile {
+      margin: 12px 0 0 0;
+    }
   }
 
   &__title {

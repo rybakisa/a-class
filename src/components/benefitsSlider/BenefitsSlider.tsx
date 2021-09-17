@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import {useState} from "react";
+import {isMobileOnly} from "react-device-detect";
 import benefitsData from "./benefitsData";
 
 const INITIAL_ACTIVE_INDEX = 2;
-const ITEM_WIDTH = 520;
+const ITEM_WIDTH = isMobileOnly ? 292 : 520;
 
 const BenefitsSlider = () => {
   const [activeIndex, setActiveIndex] = useState(INITIAL_ACTIVE_INDEX);

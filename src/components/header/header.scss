@@ -26,6 +26,10 @@
       padding: 0 20px;
       justify-content: space-between;
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__logo {

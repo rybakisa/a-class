@@ -4,9 +4,17 @@
   height: 440px;
   box-sizing: border-box;
 
+  @include mobile {
+    height: 312px;
+  }
+
   @include tablet {
     padding: 52px 0 52px 20px;
     overflow: hidden;
+  }
+
+  @include mobile {
+    padding: 24px 20px;
   }
 
   &__content {
@@ -21,6 +29,11 @@
     font-size: 48px;
     line-height: 110%;
     color: #00a99d;
+
+    @include mobile {
+      font-size: 36px;
+      max-width: 300px;
+    }
   }
 
   &__tabs {
@@ -41,6 +54,12 @@
     color: #00a99d;
     margin-right: 4px;
     transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 15px;
+      padding: 4px 8px;
+    }
 
     &--active {
       background-color: #00a99d;
@@ -76,6 +95,10 @@
     line-height: 150%;
     color: #000000;
     border-bottom: 2px solid #000000;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__img {
@@ -83,6 +106,10 @@
     bottom: 0;
     opacity: 0.5;
     transition: all 0.6s;
+
+    @include mobile {
+      display: none;
+    }
 
     &--teachers {
       right: 30%;

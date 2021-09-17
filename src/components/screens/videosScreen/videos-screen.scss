@@ -5,11 +5,15 @@
     overflow: hidden;
   }
 
+  @include mobile {
+    padding: 24px 0;
+  }
+
   &__content {
     display: flex;
     justify-content: center;
 
-    @include tablet {
+    @include tablet_mobile {
       justify-content: flex-start;
       overflow-x: scroll;
 

@@ -1,9 +1,18 @@
 import {useState} from "react";
-import {isTablet} from "react-device-detect";
+import {isTablet, isMobileOnly} from "react-device-detect";
 import feedbackData from "./feedbackData";
 
+const getItemWidth = () => {
+  if (isMobileOnly) {
+    return 308;
+  } else if (isTablet) {
+    return 708;
+  }
+
+  return 808;
+};
 const INITIAL_ACTIVE_INDEX = 3;
-const ITEM_WIDTH = isTablet ? 708 : 808;
+const ITEM_WIDTH = getItemWidth();
 
 const FeedbackSlider = () => {
   const [activeIndex, setActiveIndex] = useState(INITIAL_ACTIVE_INDEX);
@@ -38,13 +47,15 @@ const FeedbackSlider = () => {
                     alt=""
                     className="feedback-slider-item__photo"
                   />
-                  <p className="feedback-slider-item__position">
-                    {item.position}
-                  </p>
-                  <h5 className="feedback-slider-item__name">{item.name}</h5>
-                  <p className="feedback-slider-item__workplace">
-                    {item.workplace}
-                  </p>
+                  <div className="feedback-slider-item__info-text">
+                    <p className="feedback-slider-item__position">
+                      {item.position}
+                    </p>
+                    <h5 className="feedback-slider-item__name">{item.name}</h5>
+                    <p className="feedback-slider-item__workplace">
+                      {item.workplace}
+                    </p>
+                  </div>
                 </div>
                 <div className="feedback-slider-item__text">{item.text}</div>
               </div>

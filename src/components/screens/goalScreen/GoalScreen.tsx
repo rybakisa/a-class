@@ -1,4 +1,4 @@
-import {isTablet} from "react-device-detect";
+import {isMobile} from "react-device-detect";
 import ScrollableAnchor from "react-scrollable-anchor";
 import Button from "../../button/Button";
 import GoalsSlider from "../../goalsSlider/GoalsSlider";
@@ -28,10 +28,10 @@ const GoalScreen = () => {
               <br />
               Вы сможете достигнуть хороших результатов.
             </span>
-            {!isTablet && renderProgramLink()}
+            {!isMobile && renderProgramLink()}
           </div>
           <GoalsSlider />
-          {isTablet && renderProgramLink()}
+          {isMobile && renderProgramLink()}
         </div>
       </section>
     </ScrollableAnchor>

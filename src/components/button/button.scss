@@ -11,6 +11,11 @@
   color: #ffffff;
   transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
 
+  @include mobile {
+    font-size: 12px;
+    padding: 12px 15px;
+  }
+
   &:hover {
     background-color: #c9454f;
   }

@@ -1,9 +1,9 @@
-import React from "react";
 import shehova from "../../images/feedback-screen/shehova.png";
 import markova from "../../images/feedback-screen/markova.png";
 import zotova from "../../images/feedback-screen/zotova.png";
 import genenko from "../../images/feedback-screen/genenko.png";
 import lapshina from "../../images/feedback-screen/lapshina.png";
+import placeholder from "../../images/feedback-screen/photo-placeholder.png";
 
 const feedbackData = [
   {
@@ -27,7 +27,7 @@ const feedbackData = [
   },
   {
     id: 2,
-    photo: shehova,
+    photo: placeholder,
     position: "Учитель / 1 класс",
     name: "Аптышева Анна Николаевна",
     workplace:
@@ -105,7 +105,7 @@ const feedbackData = [
   },
   {
     id: 6,
-    photo: genenko,
+    photo: placeholder,
     position: "Учитель / 2 класс",
     name: "Мартынкина Олеся Станиславовна",
     workplace:

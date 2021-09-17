@@ -1,3 +1,4 @@
+import {isMobileOnly} from "react-device-detect";
 import bgImg from "../../../images/map-screen-bg.png";
 
 const MapScreen = () => (
@@ -30,7 +31,7 @@ const MapScreen = () => (
             title="map"
             src="https://yandex.ru/map-widget/v1/-/CCUmjWRnoC"
             width="100%"
-            height="467px"
+            height={isMobileOnly ? "250px" : "467px"}
             frameBorder="1"
             allowFullScreen={true}
             style={{position: "relative"}}></iframe>

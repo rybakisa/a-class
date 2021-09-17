@@ -1,4 +1,3 @@
-import React from "react";
 import bgImg from "../../../images/study-screen/study-screen-bg.png";
 import itemsImg from "../../../images/study-screen/study-screen-items.png";
 

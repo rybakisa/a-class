@@ -6,11 +6,21 @@
     padding: 52px 20px;
   }
 
+  @include mobile {
+    padding: 12px 20px;
+    position: relative;
+  }
+
   &__content {
     max-width: 1000px;
     margin: auto;
     display: flex;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__info {
@@ -38,6 +48,10 @@
     line-height: 16px;
     color: #ffffff;
     text-decoration: none;
+
+    @include mobile {
+      margin-top: 20px;
+    }
   }
 
   &__links {
@@ -54,6 +68,14 @@
 
     &:not(&:first-child) {
       margin-top: 20px;
+
+      @include mobile {
+        margin: 12px 0 0 0;
+      }
+    }
+
+    @include mobile {
+      margin: 12px 0 0 0;
     }
   }
 
@@ -73,5 +95,13 @@
     line-height: 17px;
     color: #ffffff;
     text-decoration: none;
+
+    @include mobile {
+      position: absolute;
+      right: 20px;
+      width: 110px;
+      height: 28px;
+      font-size: 10px;
+    }
   }
 }

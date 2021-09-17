@@ -7,6 +7,11 @@
     padding: 52px 20px;
   }
 
+  @include mobile {
+    padding: 24px 20px;
+    overflow: hidden;
+  }
+
   &__content {
     max-width: 1000px;
     margin: auto;
@@ -19,6 +24,11 @@
     font-size: 48px;
     line-height: 110%;
     color: #ffffff;
+
+    @include mobile {
+      font-size: 24px;
+      max-width: 300px;
+    }
   }
 
   &__bg {
@@ -31,16 +41,40 @@
 .form {
   margin-top: 48px;
 
+  @include mobile {
+    margin-top: 24px;
+  }
+
   &__input-wrapper {
     position: relative;
     display: inline-block;
 
+    @include mobile {
+      width: 100%;
+    }
+
     &--name {
       margin-right: 15px;
+
+      @include mobile {
+        margin: 0 0 4px 0;
+
+        .form__input-icon {
+          top: 10px;
+        }
+      }
     }
 
     &--phone {
       margin-top: 16px;
+
+      @include mobile {
+        margin: 4px 0 0 0;
+
+        .form__input-icon {
+          top: 10px;
+        }
+      }
     }
   }
 
@@ -48,6 +82,12 @@
     position: absolute;
     left: 12px;
     top: 17px;
+
+    @include mobile {
+      width: 13px;
+      left: 8px;
+      top: 12px;
+    }
   }
 
   &__input {
@@ -63,8 +103,19 @@
     line-height: 110%;
     color: #000000;
 
+    @include mobile {
+      width: 100%;
+      height: 34px;
+      font-size: 12px;
+      padding: 0 10px 0 30px;
+    }
+
     &[type="tel"] {
       width: 547px;
+
+      @include mobile {
+        width: 100%;
+      }
     }
 
     &--error {
@@ -97,6 +148,13 @@
     font-size: 18px;
     line-height: 21px;
     color: #ffffff;
+
+    @include mobile {
+      width: 100%;
+      font-size: 12px;
+      height: 34px;
+      border-radius: 6px;
+    }
 
     &:hover {
       background-color: #c9454f;
