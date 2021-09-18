@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../../images/footer/footer-logo.svg";
 
 const Footer = () => {

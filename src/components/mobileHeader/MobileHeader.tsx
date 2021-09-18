@@ -33,11 +33,14 @@ const MobileHeader = ({onClose}: Props) => {
         <a className="mobile-header__link" href="#contacts" onClick={onClose}>
           Контакты
         </a>
-        <a className="mobile-header__btn-link" href="#contacts">
+        <a
+          className="mobile-header__btn-link"
+          href="#contacts"
+          onClick={onClose}>
           Свяжитесь с нами
         </a>
         <a
-          className="mobile-header__btn-link"
+          className="mobile-header__btn-link mobile-header__btn-link--fill"
           href="https://teacher.aclass.ru/login">
           Вход
         </a>

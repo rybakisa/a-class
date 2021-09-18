@@ -32,4 +32,26 @@
     line-height: 21px;
     margin-bottom: 20px;
   }
+
+  &__btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 246px;
+    height: 45px;
+    border: 1px solid #f3525f;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #202940;
+    margin-top: 36px;
+
+    &--fill {
+      background-color: #f3525f;
+      color: #ffffff;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+  }
 }
