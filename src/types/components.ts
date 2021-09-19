@@ -1,3 +1,4 @@
+import React from "react";
 import {GoalItemType} from ".";
 
 interface ButtonProps {
@@ -40,6 +41,11 @@ interface FormModalProps {
   onClose: () => void;
 }
 
+interface ModalProps {
+  children: React.ReactNode;
+  onClickOutside: () => void;
+}
+
 export type {
   ButtonProps,
   GoalItemProps,
@@ -49,4 +55,5 @@ export type {
   VideoModalProps,
   VideosSliderProps,
   FormModalProps,
+  ModalProps,
 };
