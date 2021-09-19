@@ -9,7 +9,7 @@ const BenefitsSlider = () => {
   const [activeIndex, setActiveIndex] = useState(INITIAL_ACTIVE_INDEX);
   const [leftPosition, setLeftPosition] = useState(0);
 
-  const test = (index: number) => {
+  const onItemClick = (index: number) => {
     const num = Math.abs(activeIndex - index);
     if (activeIndex < index) {
       setLeftPosition(leftPosition - ITEM_WIDTH * num);
@@ -26,7 +26,7 @@ const BenefitsSlider = () => {
           <div
             key={item.key}
             className="benefits-slider__item-wrapper"
-            onClick={() => test(index)}>
+            onClick={() => onItemClick(index)}>
             <div
               className={`benefits-slider-item ${
                 activeIndex === index ? "benefits-slider-item--active" : ""
@@ -49,7 +49,7 @@ const BenefitsSlider = () => {
             className={`benefits-slider-nav__item ${
               activeIndex === index ? "benefits-slider-nav__item--active" : ""
             }`}
-            onClick={() => test(index)}></div>
+            onClick={() => onItemClick(index)}></div>
         ))}
       </div>
     </div>
