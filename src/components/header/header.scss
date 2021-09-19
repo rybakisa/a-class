@@ -1,0 +1,81 @@
+.header {
+  height: 65px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    max-width: 780px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      padding: 0 20px;
+    }
+  }
+
+  &__logo {
+    margin-right: auto;
+
+    @include tablet {
+      margin-right: 12px;
+    }
+  }
+
+  &__btn-link {
+    text-decoration: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #202940;
+    text-decoration: none;
+    border-radius: 40px;
+    margin-right: 20px;
+    transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+
+    &:hover {
+      background-color: #663d84;
+      color: #ffffff;
+    }
+
+    @include tablet {
+      padding: 0;
+      margin: 0 4px;
+    }
+  }
+
+  .button {
+    padding: 9px 24px;
+    font-size: 14px;
+    line-height: 17px;
+
+    &--outline {
+      margin-right: 6px;
+    }
+  }
+}

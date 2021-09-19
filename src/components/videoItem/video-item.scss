@@ -1,0 +1,39 @@
+.video-item {
+  margin: 0 2px;
+  cursor: pointer;
+  transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+
+  &--disabled {
+    opacity: 0.5;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    background-color: #474747;
+
+    @include mobile {
+      width: 180px;
+      height: 120px;
+
+      img {
+        width: 53px;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #000000;
+
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+}

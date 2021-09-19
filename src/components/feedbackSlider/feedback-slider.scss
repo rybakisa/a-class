@@ -1,0 +1,149 @@
+.feedback-slider {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+  }
+
+  &__item-wrapper {
+    padding: 0 4px;
+  }
+}
+
+.feedback-slider-item {
+  flex-shrink: 0;
+  width: 800px;
+  height: 345px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+  cursor: pointer;
+  padding: 20px;
+  opacity: 0.3;
+
+  @include tablet {
+    width: 700px;
+  }
+
+  @include mobile {
+    width: 300px;
+    height: 366px;
+    padding: 12px 8px;
+  }
+
+  &--active {
+    opacity: 1;
+  }
+
+  &__content {
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    width: 37%;
+    flex-shrink: 0;
+    margin-right: 10px;
+
+    @include mobile {
+      display: flex;
+      width: 100%;
+
+      img {
+        width: 85px;
+        height: 90px;
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &__position {
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 110%;
+    color: #000000;
+    opacity: 0.5;
+
+    @include mobile {
+      margin-top: 0;
+      font-size: 10px;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 110%;
+    color: #00a99d;
+    margin-top: 8px;
+
+    @include mobile {
+      font-size: 14px;
+      margin-top: 2px;
+    }
+  }
+
+  &__workplace {
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #000000;
+
+    @include mobile {
+      font-size: 10px;
+      margin-top: 2px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #000000;
+
+    p:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    @include mobile {
+      margin-top: 12px;
+      font-size: 10px;
+    }
+  }
+}
+
+.feedback-slider-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+
+  @include mobile {
+    margin-top: 24px;
+  }
+
+  &__item {
+    width: 60px;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+
+    @include mobile {
+      width: 40px;
+    }
+
+    &--active {
+      background-color: #3c827c;
+    }
+  }
+}

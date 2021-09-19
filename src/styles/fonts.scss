@@ -1,0 +1,14 @@
+@mixin font-include($name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $name;
+    font-weight: $weight;
+    font-style: $style;
+    src: url($path + ".ttf") format("truetype");
+  }
+}
+
+@include font-include("Inter", "../fonts/Inter-Regular");
+@include font-include("Inter", "../fonts/Inter-Light", 300);
+@include font-include("Inter", "../fonts/Inter-Medium", 500);
+@include font-include("Inter", "../fonts/Inter-Bold", 700);
+@include font-include("Inter", "../fonts/Inter-ExtraBold", 800);

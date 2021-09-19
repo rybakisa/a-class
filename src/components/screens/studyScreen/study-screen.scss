@@ -1,0 +1,91 @@
+.study-screen {
+  background-color: #75d1ca;
+  position: relative;
+
+  @include mobile {
+    overflow: hidden;
+  }
+
+  &__content-wrapper {
+    position: relative;
+    padding: 60px 0 96px;
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+
+    @include tablet {
+      padding: 52px 0;
+    }
+
+    @include mobile {
+      padding: 24px 20px;
+    }
+  }
+
+  &__content {
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+      margin: 0 32px 0 auto;
+    }
+
+    @include mobile {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    color: #ffffff;
+    margin-bottom: 28px;
+
+    @include mobile {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title-accent {
+    color: #663d84;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    @include mobile {
+      right: -135px;
+    }
+  }
+
+  &__items-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include desktop_small_tablet {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

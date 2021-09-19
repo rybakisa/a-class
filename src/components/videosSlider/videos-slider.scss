@@ -1,0 +1,11 @@
+.videos-slider {
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+  }
+}

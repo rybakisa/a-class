@@ -1,0 +1,28 @@
+.benefits-screen {
+  background-color: #fddedb;
+  padding: 52px 0;
+  overflow: hidden;
+
+  @include mobile {
+    padding: 24px 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    text-align: center;
+    color: #00a99d;
+    margin-bottom: 40px;
+
+    @include tablet {
+      margin: 0 40px 40px;
+    }
+
+    @include mobile {
+      font-size: 36px;
+      max-width: 300px;
+      margin: 0 auto 24px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// common
+@import "reset";
+@import "vars";
+@import "fonts";
+@import "media-mixins";
+
+// components
+@import "../components/button/button.scss";
+@import "../components/header/header.scss";
+@import "../components/footer/footer.scss";
+@import "../components/goalItem/goal-item.scss";
+@import "../components//videoItem/video-item.scss";
+@import "../components/goalsSliderDesktop/goals-slider-desktop.scss";
+@import "../components/goalsSliderMobile/goals-slider-mobile.scss";
+@import "../components/benefitsSlider/benefits-slider.scss";
+@import "../components/feedbackSlider/feedback-slider.scss";
+@import "../components/videosSlider/videos-slider.scss";
+@import "../components/screens/screens.scss";
+@import "../components/videoModal/video-modal.scss";
+@import "../components/lessonModal/lesson-modal.scss";
+@import "../components/mobileHeader/mobile-header.scss";
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+body.modal-opened {
+  overflow: hidden;
+}
