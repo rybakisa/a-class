@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {useSwipeable} from "react-swipeable";
 import {isTablet, isMobileOnly} from "react-device-detect";
 import feedbackData from "./feedbackData";
 
@@ -18,6 +19,21 @@ const FeedbackSlider = () => {
   const [activeIndex, setActiveIndex] = useState(INITIAL_ACTIVE_INDEX);
   const [leftPosition, setLeftPosition] = useState(0);
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (activeIndex === feedbackData.length - 1) {
+        return;
+      }
+      onItemClick(activeIndex + 1);
+    },
+    onSwipedRight: () => {
+      if (activeIndex === 0) {
+        return;
+      }
+      onItemClick(activeIndex - 1);
+    },
+  });
+
   const onItemClick = (index: number) => {
     const num = Math.abs(activeIndex - index);
     if (activeIndex < index) {
@@ -30,7 +46,10 @@ const FeedbackSlider = () => {
 
   return (
     <div className="feedback-slider">
-      <div style={{left: leftPosition}} className="feedback-slider__content">
+      <div
+        style={{left: leftPosition}}
+        className="feedback-slider__content"
+        {...swipeHandlers}>
         {feedbackData.map((item, index) => (
           <div
             key={item.id}

@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {useSwipeable} from "react-swipeable";
 import {isMobileOnly} from "react-device-detect";
 import benefitsData from "./benefitsData";
 
@@ -8,6 +9,21 @@ const ITEM_WIDTH = isMobileOnly ? 292 : 520;
 const BenefitsSlider = () => {
   const [activeIndex, setActiveIndex] = useState(INITIAL_ACTIVE_INDEX);
   const [leftPosition, setLeftPosition] = useState(0);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (activeIndex === benefitsData.length - 1) {
+        return;
+      }
+      onItemClick(activeIndex + 1);
+    },
+    onSwipedRight: () => {
+      if (activeIndex === 0) {
+        return;
+      }
+      onItemClick(activeIndex - 1);
+    },
+  });
 
   const onItemClick = (index: number) => {
     const num = Math.abs(activeIndex - index);
@@ -21,7 +37,10 @@ const BenefitsSlider = () => {
 
   return (
     <div className="benefits-slider">
-      <div style={{left: leftPosition}} className="benefits-slider__content">
+      <div
+        style={{left: leftPosition}}
+        className="benefits-slider__content"
+        {...swipeHandlers}>
         {benefitsData.map((item, index) => (
           <div
             key={item.key}

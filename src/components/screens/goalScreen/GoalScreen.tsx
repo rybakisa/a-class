@@ -1,7 +1,8 @@
 import {isMobile} from "react-device-detect";
 import ScrollableAnchor from "react-scrollable-anchor";
 import Button from "../../button/Button";
-import GoalsSlider from "../../goalsSlider/GoalsSlider";
+import GoalsSliderDesktop from "../../goalsSliderDesktop/GoalsSliderDesktop";
+import GoalsSliderMobile from "../../goalsSliderMobile/GoalsSliderMobile";
 
 const GoalScreen = () => {
   const renderProgramLink = () => (
@@ -30,7 +31,8 @@ const GoalScreen = () => {
             </span>
             {!isMobile && renderProgramLink()}
           </div>
-          <GoalsSlider />
+          {!isMobile && <GoalsSliderDesktop />}
+          {isMobile && <GoalsSliderMobile />}
           {isMobile && renderProgramLink()}
         </div>
       </section>

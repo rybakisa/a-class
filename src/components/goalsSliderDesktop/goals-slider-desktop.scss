@@ -1,0 +1,13 @@
+.goals-slider {
+  margin-top: 36px;
+  max-height: 570px;
+
+  &__content {
+    position: relative;
+    transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+  }
+
+  &__item-wrapper {
+    padding: 6px 0;
+  }
+}

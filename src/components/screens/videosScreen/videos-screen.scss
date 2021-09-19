@@ -1,10 +1,6 @@
 .videos-screen {
   padding: 52px 0;
 
-  @include tablet_mobile {
-    overflow: hidden;
-  }
-
   @include mobile {
     padding: 24px 0;
   }
@@ -12,36 +8,5 @@
   &__content {
     display: flex;
     justify-content: center;
-
-    @include tablet_mobile {
-      justify-content: flex-start;
-      overflow-x: scroll;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-  }
-
-  &__item {
-    margin: 0 2px;
-    cursor: pointer;
-  }
-
-  &__item-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: 200px;
-    background-color: #474747;
-  }
-
-  &__item-text {
-    margin-top: 12px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 150%;
-    color: #000000;
   }
 }
