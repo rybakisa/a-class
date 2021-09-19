@@ -49,6 +49,7 @@ const VideosSlider = ({setActiveVideo}: VideosSliderProps) => {
             onClick={() => setActiveVideo(video.videoId)}
             title={video.title}
             isDisabled={activeIndex !== index}
+            image={video.image}
           />
         ))}
       </div>

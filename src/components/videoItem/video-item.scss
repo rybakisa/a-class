@@ -14,14 +14,33 @@
     width: 300px;
     height: 200px;
     background-color: #474747;
+    position: relative;
+
+    &:hover {
+      .video-item__preview {
+        filter: brightness(1);
+      }
+    }
 
     @include mobile {
       width: 180px;
       height: 120px;
+    }
+  }
 
-      img {
-        width: 53px;
-      }
+  &__preview {
+    position: absolute;
+    width: 100%;
+    filter: brightness(0.75);
+    transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+      width: 53px;
     }
   }
 

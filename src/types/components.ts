@@ -21,6 +21,7 @@ interface MobileHeaderProps {
 
 interface VideoItemProps {
   title: string;
+  image: string;
   onClick: () => void;
   isDisabled?: boolean;
 }

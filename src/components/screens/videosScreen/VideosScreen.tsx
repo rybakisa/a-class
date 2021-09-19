@@ -19,6 +19,7 @@ const VideosScreen = () => {
               key={video.id}
               onClick={() => setActiveVideo(video.videoId)}
               title={video.title}
+              image={video.image}
             />
           ))}
         </div>
