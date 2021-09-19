@@ -35,13 +35,15 @@ const ContactScreen = () => {
   ];
 
   const onSubmit = (values: FormValues) => {
-    axios
-      .post(
-        "https://docs.google.com/forms/d/e/1FAIpQLSfRQWnqbD2j8rfGV5ojG2JYQGzSQgM-q_Qr9i6wU_lk5bq1aw/formResponse",
-        values,
-      )
-      .then(() => console.log("success"))
-      .catch(() => console.log("error"));
+    const valuesToSend = {
+      "entry.1476608727": values.name,
+      "entry.916559409": values.phone,
+      "entry.1500479875": values.email,
+    };
+    axios.post(
+      "https://docs.google.com/forms/d/e/1FAIpQLSfRQWnqbD2j8rfGV5ojG2JYQGzSQgM-q_Qr9i6wU_lk5bq1aw/formResponse",
+      valuesToSend,
+    );
   };
 
   const validationSchema = Yup.object().shape({
