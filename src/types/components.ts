@@ -25,10 +25,6 @@ interface VideoItemProps {
   isDisabled?: boolean;
 }
 
-interface YoutubeEmbedProps {
-  embedId: string;
-}
-
 interface VideoModalProps {
   onClose: () => void;
   embedId: string;
@@ -44,7 +40,6 @@ export type {
   LessonModalProps,
   MobileHeaderProps,
   VideoItemProps,
-  YoutubeEmbedProps,
   VideoModalProps,
   VideosSliderProps,
 };

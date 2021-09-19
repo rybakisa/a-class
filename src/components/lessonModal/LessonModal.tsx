@@ -1,23 +1,17 @@
-import {SyntheticEvent, useEffect} from "react";
+import {useRef} from "react";
+import {useOpenModal, useClickOutside} from "../../hooks";
 import {LessonModalProps} from "../../types";
 
 const LessonModal = ({onClose, lessonLink}: LessonModalProps) => {
-  useEffect(() => {
-    document.body.className = "modal-opened";
-    return () => {
-      document.body.className = "";
-    };
-  });
+  const ref = useRef<HTMLIFrameElement>(null);
 
-  const handleClickOutside = (e: SyntheticEvent) => {
-    if (e.target === document.querySelector(".lesson-modal")) {
-      onClose();
-    } else return;
-  };
+  useOpenModal();
+  useClickOutside(ref, onClose);
 
   return (
-    <div onClick={handleClickOutside} className="lesson-modal">
+    <div className="lesson-modal">
       <iframe
+        ref={ref}
         className="lesson-modal__frame"
         src={lessonLink}
         title="lesson frame"

@@ -1,34 +1,24 @@
-import {SyntheticEvent, useEffect} from "react";
-import {VideoModalProps, YoutubeEmbedProps} from "../../types";
-
-const YoutubeEmbed = ({embedId}: YoutubeEmbedProps) => (
-  <iframe
-    src={`https://www.youtube.com/embed/${embedId}`}
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-    title="Embedded youtube"
-    className="video-modal__frame"
-  />
-);
+import {useRef} from "react";
+import {useClickOutside, useOpenModal} from "../../hooks";
+import {VideoModalProps} from "../../types";
 
 const VideoModal = ({onClose, embedId}: VideoModalProps) => {
-  useEffect(() => {
-    document.body.className = "modal-opened";
-    return () => {
-      document.body.className = "";
-    };
-  });
+  const ref = useRef<HTMLIFrameElement>(null);
 
-  const handleClickOutside = (e: SyntheticEvent) => {
-    if (e.target === document.querySelector(".video-modal")) {
-      onClose();
-    } else return;
-  };
+  useOpenModal();
+  useClickOutside(ref, onClose);
 
   return (
-    <div onClick={handleClickOutside} className="video-modal">
-      <YoutubeEmbed embedId={embedId} />
+    <div className="video-modal">
+      <iframe
+        ref={ref}
+        src={`https://www.youtube.com/embed/${embedId}`}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Embedded youtube"
+        className="video-modal__frame"
+      />
     </div>
   );
 };

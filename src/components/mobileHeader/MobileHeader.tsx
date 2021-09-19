@@ -1,15 +1,10 @@
-import {useEffect} from "react";
+import {useOpenModal} from "../../hooks";
 import closeIcon from "../../images/close-icon.svg";
 import logo from "../../images/mobile-header-logo.svg";
 import {MobileHeaderProps} from "../../types";
 
 const MobileHeader = ({onClose}: MobileHeaderProps) => {
-  useEffect(() => {
-    document.body.className = "modal-opened";
-    return () => {
-      document.body.className = "";
-    };
-  });
+  useOpenModal();
 
   return (
     <div className="mobile-header">
