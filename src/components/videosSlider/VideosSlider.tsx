@@ -13,6 +13,7 @@ const VideosSlider = ({setActiveVideo}: VideosSliderProps) => {
   const [leftPosition, setLeftPosition] = useState(0);
 
   const swipeHandlers = useSwipeable({
+    preventDefaultTouchmoveEvent: true,
     onSwipedLeft: () => {
       if (activeIndex === videosData.length - 1) {
         return;

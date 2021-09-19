@@ -12,6 +12,7 @@ const GoalsSliderMobile = () => {
   const [leftPosition, setLeftPosition] = useState(0);
 
   const swipeHandlers = useSwipeable({
+    preventDefaultTouchmoveEvent: true,
     onSwipedLeft: () => {
       if (activeIndex === goalsData.length - 1) {
         return;
@@ -24,7 +25,6 @@ const GoalsSliderMobile = () => {
       }
       onItemSwipe(activeIndex - 1);
     },
-    preventDefaultTouchmoveEvent: true,
   });
 
   const onItemSwipe = (index: number) => {
