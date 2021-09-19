@@ -7,7 +7,7 @@ import GoalsSliderMobile from "../../goalsSliderMobile/GoalsSliderMobile";
 const GoalScreen = () => {
   const renderProgramLink = () => (
     <a className="goal-screen__link" href="https://teacher.aclass.ru/login">
-      <Button text="Попробуйте программу прямо сейчас" />
+      <Button text="Попробуйте провести урок прямо сейчас" />
     </a>
   );
 
@@ -17,17 +17,21 @@ const GoalScreen = () => {
         <div className="goal-screen__content">
           <div className="goal-screen__text">
             <h2 className="goal-screen__title">
-              Наша цель — пересмотреть подход к обучению детей
+              Наша цель —<br />
+              сделать уроки в школе эффективными и современными
             </h2>
             <span className="goal-screen__desc">
-              Мы создали полностью готовую
-              <br />к ежедневному применению онлайн платформу, которая содержит
-              в себе новейшие образовательные методики.
+              Мы создали полностью готовые
+              <br />к ежедневному применению
+              <br />
+              онлайн-уроки, которые содержит в себе
+              <br />
+              новейшие образовательные методики.
               <br />
               <br />
-              Даже с начинающим учителем
+              Даже без особой подготовки к уроку
               <br />
-              Вы сможете достигнуть хороших результатов.
+              учитель проведет его без проблем.
             </span>
             {!isMobile && renderProgramLink()}
           </div>
