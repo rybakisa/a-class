@@ -53,7 +53,7 @@
     text-transform: uppercase;
     color: #00a99d;
     margin-right: 4px;
-    transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+    transition: $transition;
 
     @include mobile {
       font-size: 12px;

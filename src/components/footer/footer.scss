@@ -103,7 +103,7 @@
     line-height: 17px;
     color: #ffffff;
     text-decoration: none;
-    transition: cubic-bezier(0.35, 0, 0, 1) 0.6s;
+    transition: $transition;
 
     &:hover {
       background-color: #f3525f;
