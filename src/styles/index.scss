@@ -30,3 +30,23 @@ body {
 body.modal-opened {
   overflow: hidden;
 }
+
+.main {
+  position: relative;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    z-index: 4;
+
+    @include desktop_small_tablet {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
