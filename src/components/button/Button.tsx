@@ -1,9 +1,6 @@
-interface Props {
-  text: string;
-  isOutline?: boolean;
-}
+import {ButtonProps} from "../../types";
 
-const Button = ({text, isOutline}: Props) => {
+const Button = ({text, isOutline}: ButtonProps) => {
   return (
     <button className={`button ${isOutline ? "button--outline" : ""}`}>
       {text}

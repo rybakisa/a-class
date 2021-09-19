@@ -1,12 +1,7 @@
 import videoIcon from "../../images/video-icon.png";
+import {VideoItemProps} from "../../types";
 
-interface Props {
-  title: string;
-  onClick: () => void;
-  isDisabled?: boolean;
-}
-
-const VideoItem = ({title, onClick, isDisabled}: Props) => (
+const VideoItem = ({title, onClick, isDisabled}: VideoItemProps) => (
   <div
     className={`video-item ${isDisabled ? "video-item--disabled" : ""}`}
     onClick={onClick}>

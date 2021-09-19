@@ -1,11 +1,7 @@
 import {SyntheticEvent, useEffect} from "react";
+import {LessonModalProps} from "../../types";
 
-interface Props {
-  onClose: () => void;
-  lessonLink: string;
-}
-
-const LessonModal = ({onClose, lessonLink}: Props) => {
+const LessonModal = ({onClose, lessonLink}: LessonModalProps) => {
   useEffect(() => {
     document.body.className = "modal-opened";
     return () => {

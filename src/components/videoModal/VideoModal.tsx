@@ -1,13 +1,5 @@
 import {SyntheticEvent, useEffect} from "react";
-
-interface Props {
-  onClose: () => void;
-  embedId: string;
-}
-
-interface YoutubeEmbedProps {
-  embedId: string;
-}
+import {VideoModalProps, YoutubeEmbedProps} from "../../types";
 
 const YoutubeEmbed = ({embedId}: YoutubeEmbedProps) => (
   <iframe
@@ -20,7 +12,7 @@ const YoutubeEmbed = ({embedId}: YoutubeEmbedProps) => (
   />
 );
 
-const VideoModal = ({onClose, embedId}: Props) => {
+const VideoModal = ({onClose, embedId}: VideoModalProps) => {
   useEffect(() => {
     document.body.className = "modal-opened";
     return () => {

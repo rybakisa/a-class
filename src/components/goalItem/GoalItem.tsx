@@ -1,11 +1,6 @@
-import {GoalItemType} from "../../types/goals";
+import {GoalItemProps} from "../../types";
 
-interface Props {
-  isActive: boolean;
-  item: GoalItemType;
-}
-
-const GoalItem = ({isActive, item}: Props) => (
+const GoalItem = ({isActive, item}: GoalItemProps) => (
   <div className={`goal-item ${isActive ? "goal-item--active" : ""}`}>
     <item.icon />
     <div className="goal-item__text">

@@ -1,12 +1,9 @@
 import {useEffect} from "react";
 import closeIcon from "../../images/close-icon.svg";
 import logo from "../../images/mobile-header-logo.svg";
+import {MobileHeaderProps} from "../../types";
 
-interface Props {
-  onClose: () => void;
-}
-
-const MobileHeader = ({onClose}: Props) => {
+const MobileHeader = ({onClose}: MobileHeaderProps) => {
   useEffect(() => {
     document.body.className = "modal-opened";
     return () => {

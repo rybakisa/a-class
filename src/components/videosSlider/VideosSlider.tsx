@@ -3,15 +3,12 @@ import {useSwipeable} from "react-swipeable";
 import {isMobileOnly} from "react-device-detect";
 import videosData from "../screens/videosScreen/videosData";
 import VideoItem from "../videoItem/VideoItem";
-
-interface Props {
-  setActiveVideo: (id: string) => void;
-}
+import {VideosSliderProps} from "../../types";
 
 const INITIAL_ACTIVE_INDEX = 1;
 const ITEM_WIDTH = isMobileOnly ? 184 : 304;
 
-const VideosSlider = ({setActiveVideo}: Props) => {
+const VideosSlider = ({setActiveVideo}: VideosSliderProps) => {
   const [activeIndex, setActiveIndex] = useState(INITIAL_ACTIVE_INDEX);
   const [leftPosition, setLeftPosition] = useState(0);
 
