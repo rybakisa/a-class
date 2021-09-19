@@ -35,6 +35,11 @@ interface VideosSliderProps {
   setActiveVideo: (id: string) => void;
 }
 
+interface FormModalProps {
+  isError: boolean;
+  onClose: () => void;
+}
+
 export type {
   ButtonProps,
   GoalItemProps,
@@ -43,4 +48,5 @@ export type {
   VideoItemProps,
   VideoModalProps,
   VideosSliderProps,
+  FormModalProps,
 };
