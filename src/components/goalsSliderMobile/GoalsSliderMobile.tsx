@@ -24,6 +24,7 @@ const GoalsSliderMobile = () => {
       }
       onItemSwipe(activeIndex - 1);
     },
+    preventDefaultTouchmoveEvent: true,
   });
 
   const onItemSwipe = (index: number) => {
