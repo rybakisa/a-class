@@ -75,10 +75,9 @@
     }
   }
 
-  &__items-img {
+  &__animation {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 0;
 
     @include desktop_small_tablet {
       display: none;

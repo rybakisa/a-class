@@ -1,7 +1,22 @@
+import Lottie from "lottie-react";
+import studyItemsAnimation from "../../../lotties/study-items.json";
 import bgImg from "../../../images/study-screen/study-screen-bg.png";
-import itemsImg from "../../../images/study-screen/study-screen-items.png";
+import {useEffect, useRef} from "react";
+import {useOnScreen} from "../../../hooks";
 
 const StudyScreen = () => {
+  const textRef = useRef(null);
+  const lottieRef = useRef(null);
+
+  const isVisible = useOnScreen(textRef);
+
+  useEffect(() => {
+    if (isVisible && lottieRef.current) {
+      // @ts-ignore
+      lottieRef.current.play();
+    }
+  });
+
   return (
     <section className="study-screen">
       <div className="study-screen__content-wrapper">
@@ -13,7 +28,7 @@ const StudyScreen = () => {
             <br />
             деятельность
           </h2>
-          <span className="study-screen__desc">
+          <span ref={textRef} className="study-screen__desc">
             А-класс идеально подходит не только
             <br />
             для школ, но для организаций
@@ -23,7 +38,13 @@ const StudyScreen = () => {
         </div>
         <img src={bgImg} alt="" className="study-screen__bg" />
       </div>
-      <img src={itemsImg} alt="" className="study-screen__items-img" />
+      <div className="study-screen__animation">
+        <Lottie
+          animationData={studyItemsAnimation}
+          autoplay={false}
+          lottieRef={lottieRef}
+        />
+      </div>
     </section>
   );
 };
