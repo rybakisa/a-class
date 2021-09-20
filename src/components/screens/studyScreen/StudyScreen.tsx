@@ -1,4 +1,4 @@
-import Lottie from "lottie-react";
+import Lottie, {LottieRefCurrentProps} from "lottie-react";
 import studyItemsAnimation from "../../../lotties/study-items.json";
 import bgImg from "../../../images/study-screen/study-screen-bg.png";
 import {useEffect, useRef} from "react";
@@ -6,13 +6,12 @@ import {useOnScreen} from "../../../hooks";
 
 const StudyScreen = () => {
   const textRef = useRef(null);
-  const lottieRef = useRef(null);
+  const lottieRef = useRef<LottieRefCurrentProps>(null);
 
   const isVisible = useOnScreen(textRef);
 
   useEffect(() => {
     if (isVisible && lottieRef.current) {
-      // @ts-ignore
       lottieRef.current.play();
     }
   });
