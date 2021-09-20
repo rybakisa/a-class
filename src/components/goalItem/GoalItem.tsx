@@ -1,3 +1,4 @@
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import {GoalItemProps} from "../../types";
 
 const GoalItem = ({isActive, item}: GoalItemProps) => {
@@ -12,9 +13,12 @@ const GoalItem = ({isActive, item}: GoalItemProps) => {
   );
 
   return item.link ? (
-    <a href={item.link} className="goal-item-link">
+    <AnchorLink
+      href={item.link}
+      className="goal-item-link"
+      offset={window.devicePixelRatio === 1 ? "-500" : "0"}>
       {renderContent()}
-    </a>
+    </AnchorLink>
   ) : (
     renderContent()
   );

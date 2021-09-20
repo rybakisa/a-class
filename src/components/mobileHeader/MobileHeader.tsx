@@ -1,4 +1,5 @@
 import {useOpenModal} from "../../hooks";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import closeIcon from "../../images/close-icon.svg";
 import logo from "../../images/mobile-header-logo.svg";
 import {MobileHeaderProps} from "../../types";
@@ -16,21 +17,30 @@ const MobileHeader = ({onClose}: MobileHeaderProps) => {
           className="mobile-header__close"
         />
         <img src={logo} alt="" className="mobile-header__logo" />
-        <a className="mobile-header__link" href="#about" onClick={onClose}>
+        <AnchorLink
+          className="mobile-header__link"
+          href="#about"
+          onClick={onClose}>
           О нас
-        </a>
-        <a className="mobile-header__link" href="#partners" onClick={onClose}>
+        </AnchorLink>
+        <AnchorLink
+          className="mobile-header__link"
+          href="#partners"
+          onClick={onClose}>
           Партнерам
-        </a>
-        <a className="mobile-header__link" href="#contacts" onClick={onClose}>
+        </AnchorLink>
+        <AnchorLink
+          className="mobile-header__link"
+          href="#contacts"
+          onClick={onClose}>
           Контакты
-        </a>
-        <a
+        </AnchorLink>
+        <AnchorLink
           className="mobile-header__btn-link"
           href="#contacts"
           onClick={onClose}>
           Свяжитесь с нами
-        </a>
+        </AnchorLink>
         <a
           className="mobile-header__btn-link mobile-header__btn-link--fill"
           href="https://teacher.aclass.ru/login">

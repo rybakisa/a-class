@@ -1,3 +1,4 @@
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import logo from "../../images/footer/footer-logo.svg";
 
 const Footer = () => {
@@ -26,9 +27,9 @@ const Footer = () => {
             Политика конфиденциальности
           </a>
         </div>
-        <a className="footer__btn-link" href="#contacts">
+        <AnchorLink className="footer__btn-link" href="#contacts">
           Свяжитесь с нами
-        </a>
+        </AnchorLink>
       </div>
     </footer>
   );
