@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {useSwipeable} from "react-swipeable";
 import {isTablet, isMobileOnly} from "react-device-detect";
-import feedbackData from "./feedbackData";
+import {FEEDBACK_DATA} from "../../data";
 
 const getItemWidth = () => {
   if (isMobileOnly) {
@@ -22,7 +22,7 @@ const FeedbackSlider = () => {
   const swipeHandlers = useSwipeable({
     preventDefaultTouchmoveEvent: true,
     onSwipedLeft: () => {
-      if (activeIndex === feedbackData.length - 1) {
+      if (activeIndex === FEEDBACK_DATA.length - 1) {
         return;
       }
       onItemClick(activeIndex + 1);
@@ -51,7 +51,7 @@ const FeedbackSlider = () => {
         style={{left: leftPosition}}
         className="feedback-slider__content"
         {...swipeHandlers}>
-        {feedbackData.map((item, index) => (
+        {FEEDBACK_DATA.map((item, index) => (
           <div
             key={item.id}
             className="feedback-slider__item-wrapper"
@@ -84,7 +84,7 @@ const FeedbackSlider = () => {
         ))}
       </div>
       <div className="feedback-slider-nav">
-        {feedbackData.map((item, index) => (
+        {FEEDBACK_DATA.map((item, index) => (
           <div
             key={item.id}
             className={`feedback-slider-nav__item ${

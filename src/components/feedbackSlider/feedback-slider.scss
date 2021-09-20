@@ -109,10 +109,6 @@
     line-height: 150%;
     color: #000000;
 
-    p:not(:first-child) {
-      margin-top: 10px;
-    }
-
     @include mobile {
       margin-top: 12px;
       font-size: 10px;

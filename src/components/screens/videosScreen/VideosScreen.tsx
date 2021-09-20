@@ -1,9 +1,9 @@
 import {useState} from "react";
 import {isMobile} from "react-device-detect";
-import videosData from "./videosData";
 import VideoModal from "../../videoModal/VideoModal";
 import VideoItem from "../../videoItem/VideoItem";
 import VideosSlider from "../../videosSlider/VideosSlider";
+import {VIDEOS_DATA} from "../../../data";
 
 const VideosScreen = () => {
   const [activeVideo, setActiveVideo] = useState("");
@@ -14,7 +14,7 @@ const VideosScreen = () => {
         <VideosSlider setActiveVideo={setActiveVideo} />
       ) : (
         <div className="videos-screen__content">
-          {videosData.map((video) => (
+          {VIDEOS_DATA.map((video) => (
             <VideoItem
               key={video.id}
               onClick={() => setActiveVideo(video.videoId)}

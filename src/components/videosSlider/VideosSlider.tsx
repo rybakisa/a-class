@@ -1,9 +1,9 @@
 import {useState} from "react";
 import {useSwipeable} from "react-swipeable";
 import {isMobileOnly} from "react-device-detect";
-import videosData from "../screens/videosScreen/videosData";
 import VideoItem from "../videoItem/VideoItem";
 import {VideosSliderProps} from "../../types";
+import {VIDEOS_DATA} from "../../data";
 
 const INITIAL_ACTIVE_INDEX = 1;
 const ITEM_WIDTH = isMobileOnly ? 184 : 304;
@@ -15,7 +15,7 @@ const VideosSlider = ({setActiveVideo}: VideosSliderProps) => {
   const swipeHandlers = useSwipeable({
     preventDefaultTouchmoveEvent: true,
     onSwipedLeft: () => {
-      if (activeIndex === videosData.length - 1) {
+      if (activeIndex === VIDEOS_DATA.length - 1) {
         return;
       }
       onItemSwipe(activeIndex + 1);
@@ -44,7 +44,7 @@ const VideosSlider = ({setActiveVideo}: VideosSliderProps) => {
         style={{left: leftPosition}}
         className="videos-slider__content"
         {...swipeHandlers}>
-        {videosData.map((video, index) => (
+        {VIDEOS_DATA.map((video, index) => (
           <VideoItem
             key={video.id}
             onClick={() => setActiveVideo(video.videoId)}

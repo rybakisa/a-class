@@ -1,36 +1,14 @@
 import axios from "axios";
 import {Field, Form, Formik} from "formik";
 import * as Yup from "yup";
-import nameIcon from "../../images/contact-screen/name-icon.svg";
-import emailIcon from "../../images/contact-screen/email-icon.svg";
-import phoneIcon from "../../images/contact-screen/phone-icon.svg";
 import {FormValues} from "../../types";
 import {useState} from "react";
 import FormModal from "../formModal/FormModal";
+import {FIELDS_DATA} from "../../data";
 
 const ContactForm = () => {
   const [isFormModal, setFormModal] = useState(false);
   const [isError, setError] = useState(false);
-
-  const fieldsData = [
-    {
-      name: "name",
-      placeholder: "Имя",
-      icon: nameIcon,
-    },
-    {
-      name: "email",
-      placeholder: "Почта",
-      type: "email",
-      icon: emailIcon,
-    },
-    {
-      name: "phone",
-      placeholder: "Телефон",
-      type: "phone",
-      icon: phoneIcon,
-    },
-  ];
 
   const onSubmit = (values: FormValues) => {
     const valuesToSend = {
@@ -70,7 +48,7 @@ const ContactForm = () => {
         onSubmit={onSubmit}>
         {({errors, touched}) => (
           <Form className="form">
-            {fieldsData.map((field) => (
+            {FIELDS_DATA.map((field) => (
               <div
                 key={field.name}
                 className={`form__input-wrapper form__input-wrapper--${field.name}`}>

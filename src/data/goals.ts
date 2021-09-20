@@ -1,12 +1,12 @@
-import {ReactComponent as KidIcon} from "../../../images/goals-screen/kid-icon.svg";
-import {ReactComponent as StudyIcon} from "../../../images/goals-screen/study-icon.svg";
-import {ReactComponent as DigitalIcon} from "../../../images/goals-screen/digital-icon.svg";
-import {ReactComponent as LiteracyIcon} from "../../../images/goals-screen/literacy-icon.svg";
-import {ReactComponent as BrainIcon} from "../../../images/goals-screen/brain-icon.svg";
-import {ReactComponent as CreativityIcon} from "../../../images/goals-screen/creativity-icon.svg";
-import {ReactComponent as LessonIcon} from "../../../images/goals-screen/lesson-icon.svg";
+import {ReactComponent as KidIcon} from "../images/goals-screen/kid-icon.svg";
+import {ReactComponent as StudyIcon} from "../images/goals-screen/study-icon.svg";
+import {ReactComponent as DigitalIcon} from "../images/goals-screen/digital-icon.svg";
+import {ReactComponent as LiteracyIcon} from "../images/goals-screen/literacy-icon.svg";
+import {ReactComponent as BrainIcon} from "../images/goals-screen/brain-icon.svg";
+import {ReactComponent as CreativityIcon} from "../images/goals-screen/creativity-icon.svg";
+import {ReactComponent as LessonIcon} from "../images/goals-screen/lesson-icon.svg";
 
-const goalsData = [
+const GOALS_DATA = [
   {
     title: "Сохранять интерес к учебе и любознательность ребенка",
     text: "Важно, чтобы уроки были интересными, веселыми и не переутомляли ребенка",
@@ -53,4 +53,4 @@ const goalsData = [
   },
 ];
 
-export default goalsData;
+export {GOALS_DATA};

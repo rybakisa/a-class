@@ -2,7 +2,7 @@ import {useState} from "react";
 import {useSwipeable} from "react-swipeable";
 import {isMobileOnly} from "react-device-detect";
 import GoalItem from "../goalItem/GoalItem";
-import goalsData from "../screens/goalScreen/goalsData";
+import {GOALS_DATA} from "../../data";
 
 const INITIAL_ACTIVE_INDEX = 3;
 const ITEM_WIDTH = isMobileOnly ? 270 : 365;
@@ -14,7 +14,7 @@ const GoalsSliderMobile = () => {
   const swipeHandlers = useSwipeable({
     preventDefaultTouchmoveEvent: true,
     onSwipedLeft: () => {
-      if (activeIndex === goalsData.length - 1) {
+      if (activeIndex === GOALS_DATA.length - 1) {
         return;
       }
       onItemSwipe(activeIndex + 1);
@@ -43,7 +43,7 @@ const GoalsSliderMobile = () => {
         style={{left: leftPosition}}
         className="goals-slider-mobile__content"
         {...swipeHandlers}>
-        {goalsData.map((item, index) => (
+        {GOALS_DATA.map((item, index) => (
           <div
             onClick={() => {
               if (item.link) return;

@@ -1,10 +1,10 @@
-import joyBg from "../../images/benefits-screen/joy-bg.png";
-import learnBg from "../../images/benefits-screen/learn-bg.png";
-import methodBg from "../../images/benefits-screen/method-bg.png";
-import teacherBg from "../../images/benefits-screen/teacher-bg.png";
-import tiredBg from "../../images/benefits-screen/tired-bg.png";
+import joyBg from "../images/benefits-screen/joy-bg.png";
+import learnBg from "../images/benefits-screen/learn-bg.png";
+import methodBg from "../images/benefits-screen/method-bg.png";
+import teacherBg from "../images/benefits-screen/teacher-bg.png";
+import tiredBg from "../images/benefits-screen/tired-bg.png";
 
-const benefitsData = [
+const BENEFITS_DATA = [
   {
     title: "Это интересно",
     text: "Дети с увлечением занимаются на уроках и с радостью ходят в школу",
@@ -37,4 +37,4 @@ const benefitsData = [
   },
 ];
 
-export default benefitsData;
+export {BENEFITS_DATA};

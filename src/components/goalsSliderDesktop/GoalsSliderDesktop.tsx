@@ -1,5 +1,5 @@
 import {useState} from "react";
-import goalsData from "../screens/goalScreen/goalsData";
+import {GOALS_DATA} from "../../data";
 import GoalItem from "../goalItem/GoalItem";
 
 const INITIAL_ACTIVE_ITEM = "study";
@@ -24,7 +24,7 @@ const GoalsSlider = () => {
   return (
     <div className="goals-slider">
       <div style={{top: topPosition}} className="goals-slider__content">
-        {goalsData.map((item, index) => (
+        {GOALS_DATA.map((item, index) => (
           <div
             key={item.key}
             className="goals-slider__item-wrapper"

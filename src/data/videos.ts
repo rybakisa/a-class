@@ -1,8 +1,8 @@
-import sergiyevPosadImg from "../../../images/videos-screen/sergiyev-posad.png";
-import electrostalImg from "../../../images/videos-screen/electrostal.png";
-import kolomnaImg from "../../../images/videos-screen/kolomna.png";
+import sergiyevPosadImg from "../images/videos-screen/sergiyev-posad.png";
+import electrostalImg from "../images/videos-screen/electrostal.png";
+import kolomnaImg from "../images/videos-screen/kolomna.png";
 
-const videosData = [
+const VIDEOS_DATA = [
   {
     id: 1,
     title: "МБОУ СОШ №22 г. Сергиев Посад",
@@ -23,4 +23,4 @@ const videosData = [
   },
 ];
 
-export default videosData;
+export {VIDEOS_DATA};
