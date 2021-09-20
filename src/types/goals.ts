@@ -3,6 +3,7 @@ interface GoalItemType {
   text: string;
   icon: React.FC;
   key: string;
+  link?: string;
 }
 
 export type {GoalItemType};

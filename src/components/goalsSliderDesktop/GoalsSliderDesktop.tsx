@@ -28,7 +28,10 @@ const GoalsSlider = () => {
           <div
             key={item.key}
             className="goals-slider__item-wrapper"
-            onClick={() => onItemClick(item.key, index)}>
+            onClick={() => {
+              if (item.link) return;
+              onItemClick(item.key, index);
+            }}>
             <GoalItem isActive={item.key === activeItem} item={item} />
           </div>
         ))}

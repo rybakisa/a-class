@@ -45,7 +45,10 @@ const GoalsSliderMobile = () => {
         {...swipeHandlers}>
         {goalsData.map((item, index) => (
           <div
-            onClick={() => onItemSwipe(index)}
+            onClick={() => {
+              if (item.link) return;
+              onItemSwipe(index);
+            }}
             key={item.key}
             className="goals-slider-mobile__item-wrapper">
             <GoalItem isActive={index === activeIndex} item={item} />
