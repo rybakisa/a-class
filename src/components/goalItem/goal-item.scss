@@ -14,6 +14,10 @@
   cursor: pointer;
   transition: $transition;
 
+  &:hover {
+    background-color: #fcdddb;
+  }
+
   @include mobile {
     width: 260px;
     height: 272px;
@@ -25,6 +29,10 @@
     background-color: #f3525f;
     border: none;
     box-shadow: -37.5px 37.5px 60px rgba(48, 65, 78, 0.2);
+
+    &:hover {
+      background-color: #f3525f;
+    }
 
     .goal-item__title,
     .goal-item__desc {

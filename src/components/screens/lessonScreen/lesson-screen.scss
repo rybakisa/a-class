@@ -2,6 +2,7 @@
   background-color: #fee6ac;
   padding: 52px 0;
   position: relative;
+  overflow: hidden;
 
   @include tablet {
     padding: 52px 20px;
@@ -17,7 +18,7 @@
     max-width: 1000px;
     margin: auto;
     position: relative;
-    z-index: 1;
+    z-index: 6;
 
     @include mobile {
       flex-direction: column;
@@ -140,6 +141,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 5;
 
     @include tablet {
       right: -15%;
@@ -148,6 +150,8 @@
 
     @include mobile {
       width: 100%;
+      bottom: -10%;
+      right: -16%;
     }
   }
 }

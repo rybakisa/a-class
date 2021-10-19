@@ -1,5 +1,8 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import logo from "../../images/footer/footer-logo.svg";
+import licence from "./licence.pdf";
+import agreement from "./agreement.pdf";
+import privacy from "./privacy.pdf";
 
 const Footer = () => {
   return (
@@ -16,15 +19,22 @@ const Footer = () => {
             className="footer__link"
             target="_blank"
             rel="noreferrer"
-            href="/agreement.pdf">
+            href={agreement}>
             Пользовательское соглашение
           </a>
           <a
             className="footer__link"
             target="_blank"
             rel="noreferrer"
-            href="/privacy.pdf">
+            href={privacy}>
             Политика конфиденциальности
+          </a>
+          <a
+            className="footer__link"
+            target="_blank"
+            rel="noreferrer"
+            href={licence}>
+            Лицензия на образовательную деятельность
           </a>
         </div>
         <AnchorLink className="footer__btn-link" href="#contacts">

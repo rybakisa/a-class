@@ -15,7 +15,7 @@
 .feedback-slider-item {
   flex-shrink: 0;
   width: 800px;
-  height: 345px;
+  height: 400px;
   background-color: #ffffff;
   border-radius: 10px;
   box-sizing: border-box;
@@ -24,8 +24,13 @@
   padding: 20px;
   opacity: 0.3;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
   @include tablet {
     width: 700px;
+    height: 350px;
   }
 
   @include mobile {
@@ -36,6 +41,10 @@
 
   &--active {
     opacity: 1;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &__content {
@@ -105,9 +114,13 @@
 
   &__text {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 150%;
     color: #000000;
+
+    @include tablet {
+      font-size: 12px;
+    }
 
     @include mobile {
       margin-top: 12px;

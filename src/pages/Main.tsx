@@ -12,14 +12,16 @@ import {
   VideosScreen,
   MapScreen,
 } from "../components/screens/screens";
-import bgImg from "../images/main-bg.svg";
+import bgImgLeft from "../images/main-bg-left.svg";
+import bgImgRight from "../images/main-bg-right.svg";
 
 configureAnchors({scrollDuration: 1000});
 
 const Main = () => {
   return (
     <main className="main">
-      <img src={bgImg} alt="" className="main__bg" />
+      <img src={bgImgLeft} alt="" className="main__bg main__bg--left" />
+      <img src={bgImgRight} alt="" className="main__bg main__bg--right" />
       <TitleScreen />
       <GoalScreen />
       <StudyScreen />

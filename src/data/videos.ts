@@ -11,15 +11,15 @@ const VIDEOS_DATA = [
   },
   {
     id: 2,
-    title: "Гимназия №4 г. Электросталь",
-    videoId: "9u4hX4Bf89s",
-    image: electrostalImg,
-  },
-  {
-    id: 3,
     title: "Школа №16 г. Коломна",
     videoId: "0y2yqLfbR0w",
     image: kolomnaImg,
+  },
+  {
+    id: 3,
+    title: "Гимназия №4 г. Электросталь",
+    videoId: "9u4hX4Bf89s",
+    image: electrostalImg,
   },
 ];
 

@@ -7,7 +7,17 @@
     height: 480px;
   }
 
-  &__bg {
+  &__bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
+
+  &__video {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +32,7 @@
     height: 100%;
     margin: auto;
     position: relative;
-    z-index: 1;
+    z-index: 3;
   }
 
   &__content {
@@ -50,7 +60,7 @@
     font-weight: 800;
     font-size: 64px;
     line-height: 110%;
-    color: #663d84;
+    color: #ffffff;
     margin-bottom: 24px;
 
     @include mobile {
@@ -63,8 +73,8 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 150%;
-    color: #000000;
-    border-bottom: 2px solid #000000;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
 
     @include mobile {
       font-size: 14px;

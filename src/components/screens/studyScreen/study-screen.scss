@@ -78,6 +78,7 @@
   &__animation {
     position: absolute;
     top: 0;
+    z-index: 5;
 
     @include desktop_small_tablet {
       display: none;
