@@ -22,27 +22,29 @@ const FeedbackSlider = () => {
   const swipeHandlers = useSwipeable({
     preventDefaultTouchmoveEvent: true,
     onSwipedLeft: () => {
-      if (activeIndex === FEEDBACK_DATA.length - 1) {
-        return;
-      }
       onItemClick(activeIndex + 1);
     },
     onSwipedRight: () => {
-      if (activeIndex === 0) {
-        return;
-      }
       onItemClick(activeIndex - 1);
     },
   });
 
   const onItemClick = (index: number) => {
     const num = Math.abs(activeIndex - index);
-    if (activeIndex < index) {
+
+    if (index === FEEDBACK_DATA.length) {
+      setLeftPosition(leftPosition + ITEM_WIDTH * (FEEDBACK_DATA.length-1));
+      setActiveIndex(0);
+    } else if (index === -1) {
+      setLeftPosition(leftPosition - ITEM_WIDTH * (FEEDBACK_DATA.length-1));
+      setActiveIndex(FEEDBACK_DATA.length - 1);
+    } else if (activeIndex < index) {
       setLeftPosition(leftPosition - ITEM_WIDTH * num);
+      setActiveIndex(index);
     } else if (activeIndex > index) {
       setLeftPosition(leftPosition + ITEM_WIDTH * num);
+      setActiveIndex(index);
     }
-    setActiveIndex(index);
   };
 
   return (
